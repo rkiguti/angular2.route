@@ -6,7 +6,9 @@ import { Router } from '@angular/router';
   template: `
     <ul>
       <li><a routerLink="">Home</a></li>
-      <li><a [routerLink]="['photoDetails', 1]">Photo 1</a></li>
+      <li><a routerLink="messages">Messages</a></li>
+      <li><a routerLink="photos">Photos</a></li>
+      <li><a [routerLink]="['photos', 1]">Photo 1</a></li>
     </ul>
     <button (click)="onClick()">Photo 2</button>
     <router-outlet></router-outlet>
@@ -17,6 +19,6 @@ export class AppComponent {
     }
 
     onClick() {
-      this._router.navigate(['photoDetails', 2]);
+      this._router.navigate(['photos', 2]);
     }
 }
