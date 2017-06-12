@@ -7,8 +7,9 @@ import { MessagesModule } from './messages/messages.module';
 import { PhotosModule } from './photos/photos.module';
 
 import { routing } from './app.routing';
-import { AuthService } from './auth.service';
-import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './shared/auth.service';
+import { AuthGuard } from './shared/auth-guard.service';
+import { PreventUnsavedChangesGuard } from './shared/prevent-unsaved-changes-guard.service';
 
 import { HomeComponent } from './home.component';
 import { NotFoundComponent } from './not-found.component';
@@ -17,6 +18,6 @@ import { NotFoundComponent } from './not-found.component';
   imports:      [ BrowserModule, HttpModule, MessagesModule, PhotosModule, routing ],
   declarations: [ AppComponent, HomeComponent, NotFoundComponent ],
   bootstrap:    [ AppComponent ],
-  providers:    [ AuthService, AuthGuard ]
+  providers:    [ AuthService, AuthGuard, PreventUnsavedChangesGuard ]
 })
 export class AppModule { }
