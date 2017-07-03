@@ -34,6 +34,8 @@ testem.log
 # app
 /app/*.js
 /app/*.map
+/app/**/*.js
+/app/**/*.map
 
 # System Files
 .DS_Store
